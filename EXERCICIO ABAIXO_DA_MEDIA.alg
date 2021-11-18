@@ -1,31 +1,36 @@
-Algoritmo "acima_diagonal"
+Algoritmo "abaixo_da_media"
 
 Var
-    soma, m, n, i, j : inteiro
-           mat : vetor[0..9, 0..9] de real
 
+     n, i : inteiro
+     vet : vetor[0..99] de real
+     soma, media : real
 Inicio
 
-      escreva("Qual a ordem da matriz? ")
-      leia(n)
-
-      para i de 0 ate n-1 faca
-          para j de 0 ate n-1 faca
-            escreva("Elemento [", i, ",", j, "] : ")
-            leia(mat[i, j])
-          fimpara
-      fimpara
-      
-      soma <- 0
-      para i de 0 ate n-1 faca
-          para j de i+1 ate n-1 faca
-           soma <- soma + mat[i, j]
-          fimpara
-      fimpara
-      
-     escreva("SOMA DOS ELEMENTOS ACIMA DA DIAGONAL PRINCIPAL = ", soma )
-      
-      
-      
-      
+  escreva("Quantos elementos vai ter o vetor? ")
+  leia(n)
+  
+  para i de 0 ate n-1 faca
+      escreva("Digite um numero: ")
+      leia(vet[i])
+  fimpara
+  
+  soma <- 0
+  para i de 0 ate n-1 faca
+       soma <- soma + vet[i]
+  fimpara
+  
+  media <- soma / n
+  escreval
+  escreval("MEDIA DO VETOR = ", media:8:3)
+  
+  escreval("ELEMENTOS ABAIXO DA MEDIA: ")
+  para i de 0 ate n-1 faca
+    se vet[i] < media entao
+    escreval(vet[i]:4:1)
+    fimse
+  fimpara
+  
+  
+  
 Fimalgoritmo
