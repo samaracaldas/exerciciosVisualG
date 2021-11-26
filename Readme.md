@@ -1,1 +1,0 @@
-Olá! Estes são exercicios que fiz no programa VisualG.
